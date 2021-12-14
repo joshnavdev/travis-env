@@ -2,9 +2,19 @@ sudo: required
 
 env:
   - BRANCH=$TRAVIS_BRANCH
+  - NAMESPACE=default
 
 script:
   - echo $BRANCH
+
+jobs:
+  include:
+    - if: BRANCH = master
+      env: NAMESPACE = production
+    - if: BRANCH = staging
+      end: NAMESPACE = staging
+    - if: BRANCH = develop
+      env: NAMESPACE = testing
 
 deploy:
   provider: script

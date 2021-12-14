@@ -1,1 +1,1 @@
-echo "The name of the branch is $BRANCH"
+echo "The name of the branch is $NAMESPACE"
