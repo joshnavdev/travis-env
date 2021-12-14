@@ -1,8 +1,9 @@
 sudo: required
 
 env:
-  - BRANCH=$TRAVIS_BRANCH
-  - NAMESPACE=default
+  global:
+    - BRANCH=$TRAVIS_BRANCH
+    - NAMESPACE=default
 
 script:
   - echo $BRANCH
