@@ -1,0 +1,7 @@
+sudo: required
+
+env:
+  - BRANCH=$TRAVIS_BRANCH
+
+script:
+  - echo $BRANCH
