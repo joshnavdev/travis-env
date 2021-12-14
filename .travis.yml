@@ -9,7 +9,15 @@ script:
   - echo $BRANCH
 
 deploy:
-  provider: script
-  script: bash ./deploy.sh
-  # on:
-  #   branch: develop
+  - provider: script
+    script: bash ./deploy.sh
+    on:
+      branch: develop
+  - provider: script
+    script: bash ./deploy.sh
+    on:
+      branch: master
+  - provider: script
+    script: bash ./deploy.sh
+    on:
+      branch: staging
