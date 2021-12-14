@@ -7,15 +7,6 @@ env:
 script:
   - echo $BRANCH
 
-jobs:
-  include:
-    - if: BRANCH = master
-      env: NAMESPACE = production
-    - if: BRANCH = staging
-      end: NAMESPACE = staging
-    - if: BRANCH = develop
-      env: NAMESPACE = testing
-
 deploy:
   provider: script
   script: bash ./deploy.sh
