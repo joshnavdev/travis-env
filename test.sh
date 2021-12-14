@@ -1,3 +1,3 @@
 #!/bin/bash
-NAME='JOSHUA'
+BRANCH=
 echo  "Hola $NAME"
