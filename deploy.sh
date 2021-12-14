@@ -1,0 +1,1 @@
+echo "The name of the branch is $BRANCH"
