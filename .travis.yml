@@ -10,14 +10,14 @@ script:
 
 deploy:
   - provider: script
-    script: bash ./deploy.sh
+    script: bash ./deploy.sh testing
     on:
       branch: develop
   - provider: script
-    script: bash ./deploy.sh
+    script: bash ./deploy.sh production
     on:
       branch: master
   - provider: script
-    script: bash ./deploy.sh
+    script: bash ./deploy.sh staging
     on:
       branch: staging
